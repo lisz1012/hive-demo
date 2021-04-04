@@ -49,6 +49,7 @@ MySQL的元数据存在了 FUNC中
 参考：https://cwiki.apache.org/confluence/display/Hive/HivePlugins
  */
 public class DeSensitive extends UDF {
+	// 方法名必须叫 evaluate
 	public Text evaluate(final Text t) {
 		if (t == null) return null;
 		String str = t.toString().substring(0, 1) + "lisz";
